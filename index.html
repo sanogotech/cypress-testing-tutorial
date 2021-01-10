@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Todo App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="col-md-4">
+      <h1 class="text-center">{{heading}}</h1>
+      <form autocomplete="off" @submit.enter.prevent="addTodo">
+        <label for="todoText" class="form-label">Add your todo here</label>
+        <input
+          type="text"
+          name="todoText"
+          id="todoText"
+          v-model="todoText"
+          class="form-control mt-3 mb-3"
+          required
+        />
+        <p>Typing.... {{todoText}}</p>
+        <input type="submit" class="btn btn-success" value="Add my Todo" />
+        <p v-if="todos.length == 0" class="text-uppercase fw-normal fs-3 mt-5">{{nothingToDo}}</p>
+      </form>
+     
+      <ul class="list-group mt-4">
+        <li
+          v-for="todo in todos"
+          v-bind:class="{doneClass: todo.done}"
+          class="list-group-item fw-bold"
+        >
+          <input
+            type="checkbox"
+            class="form-check-input me-3"
+            v-model="todo.done"
+          />{{todo.todoText}}
+          <span class="float-end">
+            <svg
+              @click="deleteTodo(todo)"
+              class="pointerMouse"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </span>
+        </li>
+        <button
+          v-if="todos.length != 0"
+          class="btn btn-warning col-sm-5 align-self-end mt-3 me-2"
+          @click="deleteList"
+        >
+          Delete list
+        </button>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

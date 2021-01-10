@@ -1,0 +1,16 @@
+div {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+form {
+  text-align: center;
+}
+
+.doneClass {
+  text-decoration: line-through;
+}
+
+.pointerMouse {
+  cursor: pointer;
+}
