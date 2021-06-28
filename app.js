@@ -1,9 +1,7 @@
-console.log("Script started");
-
 const app = new Vue({
   el: "#app",
   data: {
-    heading: "Todo App using Vue.js",
+    heading: "todolist",
     nothingToDo: "There's nothing to do today.",
     id: 0,
     todoText: null,

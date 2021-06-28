@@ -1,6 +1,17 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #AED6DC;
+}
+
+#app {
+  width: 500px;
+  margin-top: 100px;
+  background-color: #FFFFFF;
+}
+
 div {
-  margin: 1rem auto;
   padding: 1rem;
+  margin: 1rem auto;
 }
 
 form {
@@ -8,9 +19,32 @@ form {
 }
 
 .doneClass {
-  text-decoration: line-through;
+  text-decoration: line-through #4A536B ;
+
 }
 
 .pointerMouse {
   cursor: pointer;
+}
+
+#heading {
+  font-size: 50px;
+}
+
+#subHeading {
+  font-family: 'Inconsolata', monospace;
+  color: #FF9A8D;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.btn-success {
+  background-color: #4A536B !important;
+  border-color: #4A536B !important;
+}
+
+.btn-warning {
+  color: #FFFFFF !important;
+  background-color: #FF9A8D !important;
+  border-color: #FF9A8D !important;
 }
