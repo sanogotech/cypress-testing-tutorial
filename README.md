@@ -2,6 +2,7 @@
 App created with Vue.js and Bootstrap5 📅
 
 Main branch - Contains the sample application used for the testing.
+
 Cypress branch - Contains the sample application and the testing files.
 
 ## How to make it work
