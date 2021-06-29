@@ -1,4 +1,4 @@
-- # todolist
+# todolist
 App created with Vue.js and Bootstrap5 📅
 
 - Main branch - Contains the sample application used for the testing.
