@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "todolist",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^7.6.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
